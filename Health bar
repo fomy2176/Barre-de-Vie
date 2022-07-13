@@ -1,0 +1,19 @@
+wait(0.3) --Ne changer rien
+while wait() do --Ne changer rien
+	humanoid = game.Players.LocalPlayer.Character.Humanoid --Ne changer rien
+	PV = humanoid.Health / humanoid.MaxHealth --Ne changer rien
+	script.Parent.TextLabel.Text = humanoid.Health.."/"..humanoid.MaxHealth.." Health" --Ne changer rien
+	script.Parent:TweenSize(UDim2.new(PV,0,1,0),"InOut","Sine",0.15) --Ne changer rien sauf l'animation, quand l'animaton est enclanché et le temps
+
+	if humanoid.Health <= 70 then --Ne changer rien sauf le nombre
+		script.Parent.BackgroundColor3 = Color3.new(1, 0.533333, 0) --Ne changer rien sauf le couleur
+	end
+
+	if humanoid.Health <= 30 then --Ne changer rien sauf le nombre
+		script.Parent.BackgroundColor3 = Color3.new(0.870588, 0, 0) --Ne changer rien sauf le couleur
+	end
+
+	if humanoid.Health >= 71 then --Ne changer rien sauf le nombre
+		script.Parent.BackgroundColor3 = Color3.new(0.0392157, 0.792157, 0) --Ne changer rien sauf le couleur
+	end
+end
